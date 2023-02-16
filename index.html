@@ -1,163 +1,169 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <meta name="description"
-        content="Visual-Text Question Answering.">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Visual-Text Question Answering.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nerfies: Deformable Neural Radiance Fields</title>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
+        function gtag() {
+            dataLayer.push(arguments);
+        }
 
-    gtag('js', new Date());
+        gtag('js', new Date());
 
-    gtag('config', 'G-PYVRSFMDRL');
-  </script>
+        gtag('config', 'G-PYVRSFMDRL');
+    </script>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="">
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="icon" href="">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-<!--  <script src="./static/js/index.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <!--  <script src="./static/js/index.js"></script>-->
 </head>
+
 <body>
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Visual-Text Question Answering</h1>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <span>Kang Chen</span><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="http://homepage.hit.edu.cn/wuxiangqian">Xiangqian Wu</a><sup>2</sup></span>
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title">Visual-Text Question Answering</h1>
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block">
+                                <span>Kang Chen</span><sup>1</sup>,</span>
+                            <span class="author-block">
+                                <a href="http://homepage.hit.edu.cn/wuxiangqian">Xiangqian Wu</a><sup>2</sup></span>
 
-          </div>
+                        </div>
 
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Harbin Institute of Technology</span>
-          </div>
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block"><sup>1</sup>Harbin Institute of Technology</span>
+                        </div>
 
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- Dataset Link. -->
-              <span class="link-block">
-                <a href="static/files/sample.zip"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a>
-              </span>
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <!-- Dataset Link. -->
+                                <span class="link-block">
+                                    <a href="static/files/sample.zip"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="far fa-images"></i>
+                                        </span>
+                                        <span>Data</span>
+                                    </a>
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
-
-          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
+    <section class="hero teaser">
+        <div class="container is-max-desktop">
+            <div class="hero-body">
 
-      <img src="static/images/img.png" width="100%" alt="">
-      <h2 class="subtitle has-text-centered">
-        Figure 1
-      </h2>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            In this challenge, the model is expected to answer the question according to the given
-            image-text pair. Information diversity, multimedia multi-step reasoning and open-ended
-            answer make our task more challenging than the existing dataset. The aim of this challenge
-            is to develop and benchmark models that are able to multimedia entity alignment, multi-step
-            reasoning and open-ended answer generation.
-          </p>
+                <img src="static/images/img.png" width="100%" alt="">
+                <h2 class="subtitle has-text-centered">
+                    Figure 1: Example in our dataset with the question-answer pairs and their corresponding image and
+                    text. Different representations of the same object in text and image are identified with the same
+                    color. For example, ‘Elena’ in the text and the object bounding box corresponding to ‘Elena’ in the
+                    image are marked red.
+                </h2>
+            </div>
         </div>
-      </div>
-    </div>
-    <!--/ Abstract. -->
+    </section>
 
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Challenge Task</h2>
-        <div class="content has-text-justified">
-          <p>
-            The ideal form of Visual Question Answering requires understanding, grounding and reasoning
-            in the joint space of vision and language and serves as a proxy for the AI task of scene
-            understanding. However, most existing VQA benchmarks are limited to just picking the answer
-            from a pre-defined set of options and lack attention to text. We present a new challenge
-            with a dataset that contains more than 27,697 questions based on 10,238 image-text pairs.
-            Specifically, the task requires multi-hop reasoning between image and text to align
-            multimedia representations of the same entity and then use natural language to answer the
-            question. The aim of this challenge is to develop and benchmark models that are capable of
-            multimedia entity alignment, multi-step reasoning and open-ended answer generation.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Data</h2>
-        <div class="content has-text-justified">
-            <p>
-                You can download the sample data now and the full data is coming soon.
-            </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    <section class="section">
+        <div class="container is-max-desktop">
+            <!-- Abstract. -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            The ideal form of Visual Question Answering requires understanding, grounding and reasoning
+                            in the joint space of vision and language and serves as a proxy for the AI task of scene
+                            understanding. However, most existing VQA benchmarks are limited to just picking the answer
+                            from a pre-defined set of options and lack attention to text. We present a new challenge
+                            with a dataset that contains more than 27,697 questions based on 10,238 image-text pairs.
+                            Specifically, the task requires multi-hop reasoning between image and text to align
+                            multimedia representations of the same entity and then use natural language to answer the
+                            question. The aim of this challenge is to develop and benchmark models that are capable of
+                            multimedia entity alignment, multi-step reasoning and open-ended answer generation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--/ Abstract. -->
 
-<footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            Borrowed from <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a>
-          </p>
+            <!-- Paper video. -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Challenge Task</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            As illustrated in Figure 1, given an image-text pair and a question, a system needs to
+                            answer the question by natural language. Importantly, answering the questions requires at
+                            least: (1) analyze the question and find out the key entities, (2) align the key entities
+                            between image and text, (3) generate the answer according to the question and aligned
+                            entities. For example, in Figure 1 Q1, the key entity is “Elena”. According to the text
+                            “gold hair”, we can determine that the second person from the right in the image is “Elena”.
+                            Finally, we further answer “suit” based on the image information. As for Q2, it is a more
+                            complex question, and the steps mentioned before need to be repeated several times to answer
+                            the question.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--/ Paper video. -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Data</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            You can download the sample data now and the full data is coming soon.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-</footer>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-8">
+                    <div class="content">
+                        <p>
+                            Borrowed from <a href="https://github.com/nerfies/nerfies.github.io">source code</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
+
 </html>
