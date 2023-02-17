@@ -83,7 +83,7 @@
         <div class="container is-max-desktop">
             <div class="hero-body">
 
-                <img src="static/images/img.png" width="100%" alt="">
+                <img src="static/images/example.svg" width="100%" alt="">
                 <h2 class="subtitle has-text-centered">
                     Figure 1: Example in our dataset with the question-answer pairs and their corresponding image and
                     text. Different representations of the same object in text and image are identified with the same
@@ -106,11 +106,12 @@
                             in the joint space of vision and language and serves as a proxy for the AI task of scene
                             understanding. However, most existing VQA benchmarks are limited to just picking the answer
                             from a pre-defined set of options and lack attention to text. We present a new challenge
-                            with a dataset that contains more than 27,697 questions based on 10,238 image-text pairs.
-                            Specifically, the task requires multi-hop reasoning between image and text to align
-                            multimedia representations of the same entity and then use natural language to answer the
-                            question. The aim of this challenge is to develop and benchmark models that are capable of
-                            multimedia entity alignment, multi-step reasoning and open-ended answer generation.
+                            with a dataset that contains more than 27,317 questions based on 10,238 image-text pairs.
+                            Specifically, the task requires the model to align multimedia representations of the same
+                            entity to implement multi-hop reasoning between image and text and finally use natural
+                            language to answer the question. The aim of this challenge is to develop and benchmark
+                            models that are capable of multimedia entity alignment, multi-step reasoning and open-ended
+                            answer generation.
                         </p>
                     </div>
                 </div>
@@ -123,15 +124,14 @@
                     <h2 class="title is-3">Challenge Task</h2>
                     <div class="content has-text-justified">
                         <p>
-                            As illustrated in Figure 1, given an image-text pair and a question, a system needs to
-                            answer the question by natural language. Importantly, answering the questions requires at
-                            least: (1) analyze the question and find out the key entities, (2) align the key entities
-                            between image and text, (3) generate the answer according to the question and aligned
-                            entities. For example, in Figure 1 Q1, the key entity is “Elena”. According to the text
-                            “gold hair”, we can determine that the second person from the right in the image is “Elena”.
-                            Finally, we further answer “suit” based on the image information. As for Q2, it is a more
-                            complex question, and the steps mentioned before need to be repeated several times to answer
-                            the question.
+                            As illustrated in Figure 1, given an image-text pair and a question, a system is required to
+                            answer the question by natural language. Importantly, the system needs to: (1) analyze the
+                            question and find out the key entities, (2) align the key entities between image and text,
+                            (3) generate the answer according to the question and aligned entities. For example, in
+                            Figure 1 Q1, the key entity is “Elena”. According to the text “gold hair”, we can determine
+                            that the second person from the right in the image is “Elena”. Finally, we further answer
+                            “suit” based on the image information. As for Q2, which is a more complex question, the
+                            previous steps need to be repeated several times to answer it.
                         </p>
                     </div>
                 </div>
